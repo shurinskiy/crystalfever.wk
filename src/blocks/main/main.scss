@@ -1,0 +1,34 @@
+.main {
+	$self: &;
+
+	&__container {
+		// @include outline(yellow);
+	}
+
+	&__game {
+		margin: 0 -30px;
+		display: flex;
+		flex-flow: row wrap;
+		// justify-content: center;
+	}
+
+	&__panel {
+		box-sizing: border-box;
+		margin: 0 30px 50px;
+		width: calc((99.9% / 24 * 10) - 60px);
+	}
+	
+	&__desk {
+		// @include outline();
+		box-sizing: border-box;
+		margin: 0 30px 50px;
+		width: calc((99.9% / 24 * 14) - 60px);
+	}
+	
+	&__table {
+		// @include outline();
+		box-sizing: border-box;
+		width: calc((99.9% / 24 * 14) - 25px);
+		margin: 0 0 50px auto;
+	}
+}

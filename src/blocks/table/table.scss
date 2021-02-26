@@ -1,0 +1,90 @@
+.table {
+	$self: &;
+
+	&__title {
+		text-align: center;
+		text-transform: uppercase;
+		color: #fff;
+		margin-bottom: 20px;
+		font-size: 11px;
+	}
+
+	&__body {
+
+	}
+
+	&__head {
+		padding: 12px 0;
+		display: flex;
+		font-size: 11px;
+	}
+
+	&__head-item {
+		width: 20%;
+		text-align: center;
+		color: #4e5f7d;
+		text-transform: uppercase;
+	}
+
+	&__row {
+		display: flex;
+		padding: 12px 0;
+
+		&:nth-child(even) {
+			background-color: #2b3745;
+		}
+	}
+
+	&__item {
+		width: 20%;
+		text-align: center;
+		display: inline-block;
+		font-size: 11px;
+		letter-spacing: 0.5px;
+
+		&_id {
+			color: #8094b8;
+			text-decoration: underline;
+		}
+
+		&_time {
+			color: #8094b8;
+		}
+
+		&_player {
+			color: #00b9e5;
+
+			&::before {
+				content: '';
+				display: inline-block;
+				width: 11px;
+				height: 10px;
+				background: url('./images/user-icon.png') center / auto no-repeat transparent;
+				margin-right: 5px;
+			}
+		}
+		
+		&_bet {
+			color: #fff;
+			font-family: "HCB", sans-serif;
+
+			&::before {
+				content: '';
+				display: inline-block;
+				width: 12px;
+				height: 10px;
+				background: url('./images/crystal-small.png') center / auto no-repeat transparent;
+				margin-right: 5px;
+			}
+		}
+
+		&_profit {
+			font-family: "HCB", sans-serif;
+			color: #5dd92c;
+		}
+
+		&_red {
+			color: #f13636;			
+		}
+	}
+}

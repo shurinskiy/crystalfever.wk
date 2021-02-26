@@ -1,0 +1,124 @@
+@@include("_head.html", {"bodyclass":"home"}) 
+@@include("_header.html") 
+<div class="main"> 
+	<div class="container main__container">
+		<div class="main__game">
+			<div class="main__panel panel">
+				<div class="panel__bet">
+					<h2 class="panel__label">Bet amount</h2>
+					<div class="panel__data panel__data_bet">
+						<input type="text" name="" placeholder="0.00000">
+					</div>
+					<div class="panel__buttons">
+						<label class="panel__button">
+							<input type="radio" name="bet" checked>
+							<span>min</span>
+						</label>
+						<label class="panel__button">
+							<input type="radio" name="bet">
+							<span>1/2</span>
+						</label>
+						<label class="panel__button">
+							<input type="radio" name="bet">
+							<span>2x</span>
+						</label>
+					</div>
+				</div>
+				<div class="panel__mines">
+					<h2 class="panel__label">Mines num</h2>
+					<div class="panel__data panel__data_mines"><input type="text" name="minesboard" value="1"></div>
+					<div class="panel__buttons">
+						<label class="panel__button">
+							<input type="radio" name="mines" value="1" checked>
+							<span>1</span>
+						</label>
+						<label class="panel__button">
+							<input type="radio" name="mines" value="3">
+							<span>3</span>
+						</label>
+						<label class="panel__button">
+							<input type="radio" name="mines" value="5">
+							<span>5</span>
+						</label>
+						<label class="panel__button">
+							<input type="radio" name="mines" value="24">
+							<span>24</span>
+						</label>
+					</div>
+					<button class="panel__play-btn">Play</button>
+				</div>
+			</div>
+			<div class="main__desk desk">
+				<div class="desk__items">
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+					<div class="desk__item"></div>
+				</div>
+			</div>
+		</div>
+		<div class="main__table table">
+			<h2 class="table__title">All bets</h2>
+			<div class="table__body">
+				<div class="table__head">
+					<div class="table__head-item">Id</div>
+					<div class="table__head-item">Time</div>
+					<div class="table__head-item">Player</div>
+					<div class="table__head-item">Bet</div>
+					<div class="table__head-item">Profit</div>
+				</div>
+				<div class="table__row">
+					<div class="table__item table__item_id">337c8dce7</div>
+					<div class="table__item table__item_time">17:32:41</div>
+					<div class="table__item table__item_player">MisterT</div>
+					<div class="table__item table__item_bet">50.0000000</div>
+					<div class="table__item table__item_profit">+50.0000000</div>
+				</div>
+				<div class="table__row">
+					<div class="table__item table__item_id">337c8dce7</div>
+					<div class="table__item table__item_time">17:32:41</div>
+					<div class="table__item table__item_player">MisterT</div>
+					<div class="table__item table__item_bet">50.0000000</div>
+					<div class="table__item table__item_profit table__item_red">-50.0000000</div>
+				</div>
+				<div class="table__row">
+					<div class="table__item table__item_id">337c8dce7</div>
+					<div class="table__item table__item_time">17:32:41</div>
+					<div class="table__item table__item_player">MisterT</div>
+					<div class="table__item table__item_bet">50.0000000</div>
+					<div class="table__item table__item_profit">+50.0000000</div>
+				</div>
+				<div class="table__row">
+					<div class="table__item table__item_id">337c8dce7</div>
+					<div class="table__item table__item_time">17:32:41</div>
+					<div class="table__item table__item_player">MisterT</div>
+					<div class="table__item table__item_bet">50.0000000</div>
+					<div class="table__item table__item_profit table__item_red">-50.0000000</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div> 
+@@include("_bottom.html") 

@@ -1,0 +1,24 @@
+.footer {
+	$self: &;
+	box-sizing: border-box;
+	border-top: 1px solid #4e5f7d;
+	background-color: #2b3745;
+	color: #8094b8;
+	
+	&__inner {
+		min-height: 70px;
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__copy {
+
+	}
+
+	&__year {
+
+	}
+
+}

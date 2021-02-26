@@ -1,0 +1,39 @@
+.header {
+	$self: &;
+	box-sizing: border-box;
+	border-top: 1px solid #4e5f7d;
+	background-color: #2b3745;
+	margin-bottom: 56px;
+	
+	&__container {
+		
+	}
+	
+	&__inner {
+		min-height: 70px;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		display: block;
+	}
+
+	&__total {
+		color: #fff;
+		font-size: 16px;
+		font-family: "HCB", sans-serif;
+		letter-spacing: 1.5px;
+		padding-left: 45px;
+		height: 30px;
+		background: url('./images/crystal-amount.png') center left / auto no-repeat transparent;
+
+		span {
+			vertical-align: middle;
+			line-height: 30px;
+		}
+	}
+
+}
