@@ -5,17 +5,33 @@
 	border-top: 1px solid #4e5f7d;
 	border-radius: 5px;
 
-	&__bet {
+	&__fields {
+		box-sizing: border-box;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		margin-bottom: 10px;
+	}
 
+	&__field {
+		width: 100%;
+		
+		&_half {
+			width: 48%;
+		}
 	}
 
 	&__label {
 		color: #8094b8;
 		text-transform: uppercase;
-		font-size: 13px;
-		letter-spacing: 1px;
+		font-size: 11px;
 		line-height: 1.1;
 		margin-bottom: 5px;
+
+		span {
+			text-transform: none;
+			letter-spacing: normal;
+		}
 	}
 
 	&__data {
@@ -40,14 +56,21 @@
 
 		input:focus::placeholder {
 			color: transparent;
-			border-color: #00b9e5;
 		}
 
 		input:focus {
 			border-color: #00b9e5;
 		}
 
-		&_bet {
+		input:read-only:focus::placeholder {
+			color: #8094b8;
+		}
+
+		input:read-only:focus {
+			border-color: #8094b8;
+		}
+
+		&_crystal {
 			position: relative;
 
 			&::before {
@@ -63,20 +86,59 @@
 			}
 
 			input {
-				padding-left: 70px;				
+				padding-left: 70px;
 			}
 		}
 
-		&_mines {
-	
+		&_crystal-right {
+			position: relative;
+
+			&::after {
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%);
+				display: block;
+				content: '';
+				width: 50px;
+				height: 32px;
+				background: url('./images/crystal-amount.png') center / auto no-repeat transparent;
+			}
+
+			input {
+				padding-right: 50px;
+				border-color: #00b9e5 !important;
+			}
+		}
+
+		&_mine-right {
+			position: relative;
+
+			&::after {
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%);
+				display: block;
+				content: '';
+				width: 45px;
+				height: 39px;
+				background: url('./images/bomb-big.png') center / 30px 35px no-repeat transparent;
+			}
+
+			input {
+				padding-right: 40px;
+				border-color: #00b9e5 !important;
+			}
 		}
 	}
 
 	&__buttons {
-		margin-bottom: 15px;
+		width: 100%;
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: space-between;
+		margin-bottom: 5px;
 	}
 
 	&__button {
@@ -107,8 +169,7 @@
 		}
 	}
 
-	&__play-btn {
-		background-color: #00b9e5;
+	&__b-btn {
 		box-sizing: border-box;
 		appearance: none;
 		outline: none;
@@ -120,6 +181,14 @@
 		padding: 15px;
 		border-radius: 4px;
 		font-family: "HCB", sans-serif;
-		margin: 15px 0;
+		margin: 0 0 10px 0;
+		background-color: #00b9e5;
+		
+		&:disabled {
+			font-family: "HC", sans-serif;
+			color: #8094b8;
+			background-color: #4e5f7d;
+			cursor: default;
+		}
 	}
 }

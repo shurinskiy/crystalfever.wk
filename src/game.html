@@ -1,4 +1,4 @@
-@@include("_head.html", {"bodyclass":"home"}) 
+@@include("_head.html", {"bodyclass":"game"}) 
 @@include("_header.html") 
 <div class="main main_bgrd"> 
 	<div class="container main__container">
@@ -27,29 +27,28 @@
 					</div>
 				</div>
 				<div class="panel__fields">
-					<div class="panel__field">
+					<div class="panel__field panel__field_half">
 						<h2 class="panel__label">Mines num</h2>
-						<div class="panel__data panel__data_mines"><input type="text" name="minesboard" value="1"></div>
+						<div class="panel__data panel__data_mine-right">
+							<input type="text" name="" placeholder="0" readonly>
+						</div>
 					</div>
-					<div class="panel__buttons">
-						<label class="panel__button">
-							<input type="radio" name="mines" value="1" checked>
-							<span>1</span>
-						</label>
-						<label class="panel__button">
-							<input type="radio" name="mines" value="3">
-							<span>3</span>
-						</label>
-						<label class="panel__button">
-							<input type="radio" name="mines" value="5">
-							<span>5</span>
-						</label>
-						<label class="panel__button">
-							<input type="radio" name="mines" value="24">
-							<span>24</span>
-						</label>
+					<div class="panel__field panel__field_half">
+						<h2 class="panel__label">Crystals</h2>
+						<div class="panel__data panel__data_crystal-right">
+							<input type="text" name="" placeholder="0" readonly>
+						</div>
 					</div>
 				</div>
+				<div class="panel__fields">
+					<div class="panel__field">
+						<h2 class="panel__label">Profit on next tile <span>(1.21x)</span></h2>
+						<div class="panel__data panel__data_crystal">
+							<input type="text" name="" placeholder="0.00000" readonly>
+						</div>
+					</div>
+				</div>
+				<button class="panel__b-btn" disabled>Pick random tile</button>
 				<button class="panel__b-btn">Play</button>
 			</div>
 			<div class="main__desk desk">
@@ -62,3 +61,4 @@
 	</div>
 </div> 
 @@include("_bottom.html") 
+

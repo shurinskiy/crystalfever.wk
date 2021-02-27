@@ -4,6 +4,7 @@
 	border-top: 1px solid #4e5f7d;
 	background-color: #2b3745;
 	margin-bottom: 56px;
+	z-index: 2;
 	
 	&__container {
 		
@@ -19,6 +20,7 @@
 
 	&__logo {
 		display: block;
+		outline: none;
 	}
 
 	&__total {

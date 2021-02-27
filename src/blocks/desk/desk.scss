@@ -1,7 +1,17 @@
 .desk {
 	$self: &;
 
+	&_you-won {
+		position: relative;
+
+		&::before {
+
+		}
+	}
+
 	&__items {
+		// @include outline();
+		box-sizing: border-box;
 		margin: 0 -5px -10px;
 		display: flex;
 		flex-flow: row wrap;
@@ -9,13 +19,90 @@
 
 	&__item {
 		box-sizing: border-box;
-		background-color: #8094b8;
+		border: 1px solid #4e5f7d;
+		border-top: 1px solid #8094b8 !important;
+		background-color: #4e5f7d;
 		margin: 0 5px 10px;
 		border-radius: 4px;
 		width: calc(20% - 10px);
 		box-shadow: 0px 3px 1px #0b131d;
 		cursor: pointer;
-
+		
 		@include aspect-ratio(1, 1);
+		
+		&:hover {
+			background-color: #8094b8;
+		}
+		
+		&_crystal {
+			background-repeat: no-repeat;
+			background-position: center;
+			background-color: #222f3e;
+			border: 1px solid #222f3e;
+			animation: crystal 0.3s;
+			animation-fill-mode: forwards;
+
+			&:hover {
+				background-color: #222f3e;
+			}
+			
+			@keyframes crystal {
+				0% {
+					background-size: 10%;
+				}
+				50% {
+					transform: scale(0.7);
+					background-size: 30%;
+				}
+				99% {
+					transform: scale(1);
+					background-size: 100%;
+				}
+				100% {
+					background-image: url('./images/crystal-big.png');
+					background-size: auto;
+				}
+			}
+		}
+		
+		&_mine {
+			@extend #{$self}__item_crystal;
+			animation: bomb 0.3s;
+			animation-fill-mode: forwards;
+			
+			@keyframes bomb {
+				0% {
+					background-size: 10%;
+				}
+				50% {
+					transform: scale(0.7);
+					background-size: 30%;
+				}
+				99% {
+					transform: scale(1);
+					background-size: 79%;
+				}
+				100% {
+					background-image: url('./images/bomb-big.png');
+					background-size: auto;
+				}
+			}
+		}
+
+		&_crystal-small {
+			background: url('./images/crystal.png') center / auto no-repeat #4e5f7d;
+
+			&:hover {
+				background-color: #4e5f7d;
+			}
+		}
+		
+		&_mine-small {
+			background: url('./images/bomb.png') center / auto no-repeat #4e5f7d;
+
+			&:hover {
+				background-color: #4e5f7d;
+			}
+		}
 	}
 }
