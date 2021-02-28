@@ -14,17 +14,27 @@
 		// @include outline(yellow);
 	}
 
+	&__panel {
+		box-sizing: border-box;
+		margin: 0 30px 50px;
+		width: calc((99.9% / 24 * 10) - 60px);
+
+		@include media('<=900px') {
+			width: 100%;
+			margin: 0 0 50px;
+		}
+	}
+
 	&__game {
 		margin: 0 -30px;
 		display: flex;
 		flex-flow: row wrap;
 		// justify-content: center;
-	}
 
-	&__panel {
-		box-sizing: border-box;
-		margin: 0 30px 50px;
-		width: calc((99.9% / 24 * 10) - 60px);
+		@include media('<=900px') {
+			width: 100%;
+			margin: 0;
+		}
 	}
 	
 	&__desk {
@@ -32,6 +42,11 @@
 		box-sizing: border-box;
 		margin: 0 30px 50px;
 		width: calc((99.9% / 24 * 14) - 60px);
+
+		@include media('<=900px') {
+			width: 100%;
+			margin: 0 0 50px;
+		}
 	}
 	
 	&__table {
@@ -39,6 +54,10 @@
 		box-sizing: border-box;
 		width: calc((99.9% / 24 * 14) - 25px);
 		margin: 0 0 50px auto;
+
+		@include media('<=900px') {
+			width: 100%;
+		}
 	}
 
 }

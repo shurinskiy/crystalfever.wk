@@ -39,7 +39,7 @@ $breakpoints: (
 @include font-face("HeliosC-Bold", "HCB");
 
 
-@import "../../node_modules/owl.carousel/dist/assets/owl.carousel";
+// @import "../../node_modules/owl.carousel/dist/assets/owl.carousel";
 @import "../blocks/**/*.scss";
 
 // body { @include screen-media(); }
